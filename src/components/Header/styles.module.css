@@ -1,0 +1,34 @@
+.logo {
+    width: 200px;
+    height: 40px;
+    margin-right: 4%;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    min-width: 60vw;
+}
+
+.container {
+    display: flex;
+    height: 40px;
+    margin: 25px 101px;
+    justify-content: space-between;
+    position: absolute;
+    width: 80vw;
+}
+
+.nav > a {
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.icons {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
