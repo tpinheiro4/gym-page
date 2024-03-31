@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import background from './assets/background.png'
-import './App.css'
+import './scss/style.scss'
 
 export default function App() {
   return (
