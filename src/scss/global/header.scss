@@ -1,0 +1,37 @@
+header {
+  padding: 25px 0;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 60%, rgba(0, 0, 0, 0.50) 100%);
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-right: 68px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 40px;
+
+      &__item {
+        a {
+          color: white;
+          font-family: $titleFont;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      margin-left: auto;
+      gap: 36px;
+    }
+  }
+}

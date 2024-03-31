@@ -1,12 +1,13 @@
-import Header from "./components/Header";
-import background from './assets/background.png'
-import './scss/style.scss'
+import Header from "./components/Header/Header";
+import Banner from "./components/Home/Banner";
+import './scss/style.scss';
+
 
 export default function App() {
   return (
     <div id="app">
       <Header/>
-      <img className='background' src={background} alt="" />
+      <Banner />
     </div>
   )
 }
