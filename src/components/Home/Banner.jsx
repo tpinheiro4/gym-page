@@ -7,6 +7,8 @@ export default function Banner() {
                 <Row>
                     <Col className="content" sm={6}>
                         <h1>Potter ipsum wand elf parchment wingardium.</h1>
+
+                        <a class="button">crie seu treino</a>
                     </Col>
                 </Row>
             </div>

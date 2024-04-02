@@ -16,6 +16,7 @@ header {
     .menu {
       display: flex;
       gap: 40px;
+      margin-bottom: 0;
 
       &__item {
         a {
@@ -23,7 +24,7 @@ header {
           font-family: $titleFont;
           font-size: 18px;
           font-style: normal;
-          font-weight: 400;
+          letter-spacing: 2px;
         }
       }
     }

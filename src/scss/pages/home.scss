@@ -37,6 +37,18 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin-bottom: 61px;
+      }
+
+      .button {
+        font-family: $titleFont;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        background-color: $primaryColor;
+        padding: 12px 45px;
+        border-radius: 15px;
+        color: white;
       }
     }
   }
