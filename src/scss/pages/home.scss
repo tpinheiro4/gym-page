@@ -53,3 +53,26 @@
     }
   }
 }
+
+.container-2 {
+  overflow: hidden;
+
+  .about-section {
+    background-color: $secondaryColor;
+    color: #fff;
+    font-family: $fontBase;
+  
+    .text-content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 4%;
+    }
+    
+    h2 {
+      font-family: $titleFont;
+      text-decoration: underline $primaryColor;
+      margin-bottom: 3rem;
+    }
+  }
+}
