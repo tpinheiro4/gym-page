@@ -1,78 +1,84 @@
-.banner {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  z-index: 1;
-  background: {
-    image: url("src/assets/background.png");
-    size: cover;
-    repeat: no-repeat;
-    position: center center;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      243deg,
-      rgba(143, 0, 255, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 100%
-    );
-    filter: grayscale(0.3);
-  }
-
-  .container {
-    display: flex;
-    align-items: center;
+body {
+  background-color: $secondaryColor;
+  
+  .banner {
+    width: 100%;
     height: 100vh;
     position: relative;
-    z-index: 3;
-
-    .content {
-      h1 {
-        color: white;
-        font-family: $fontBase;
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        margin-bottom: 61px;
-      }
-
-      .button {
-        font-family: $titleFont;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 400;
-        background-color: $primaryColor;
-        padding: 12px 45px;
-        border-radius: 15px;
-        color: white;
+    z-index: 1;
+    background: {
+      image: url("src/assets/background.png");
+      size: cover;
+      repeat: no-repeat;
+      position: center center;
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        243deg,
+        rgba(143, 0, 255, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+      );
+      filter: grayscale(0.3);
+    }
+  
+    .container {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+      z-index: 3;
+  
+      .content {
+        h1 {
+          color: white;
+          font-family: $fontBase;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 61px;
+        }
+  
+        .button {
+          font-family: $titleFont;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 400;
+          background-color: $primaryColor;
+          padding: 12px 45px;
+          border-radius: 15px;
+          color: white;
+        }
       }
     }
   }
-}
-
-.container-2 {
-  overflow: hidden;
-
-  .about-section {
-    background-color: $secondaryColor;
-    color: #fff;
-    font-family: $fontBase;
   
+  .container {
+    display: flex;
+    justify-content: space-between;
+    
     .text-content {
+      width: 40%;
       display: flex;
+      color: #fff;
+      font-family: $fontBase;
       justify-content: center;
       flex-direction: column;
-      padding: 4%;
+      
+      h2 {
+        font-family: $titleFont;
+        text-decoration: underline $primaryColor;
+        margin-bottom: 3rem;
+      }
     }
-    
-    h2 {
-      font-family: $titleFont;
-      text-decoration: underline $primaryColor;
-      margin-bottom: 3rem;
+  
+    .image-about {
+      height: auto;
+      float: right;
     }
   }
 }
