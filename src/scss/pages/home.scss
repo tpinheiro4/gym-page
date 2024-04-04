@@ -57,12 +57,13 @@ body {
     }
   }
   
-  .container {
+  .about {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    height: 564px;
     
     .text-content {
-      width: 40%;
+      flex: 1;
       display: flex;
       color: #fff;
       font-family: $fontBase;
@@ -77,8 +78,15 @@ body {
     }
   
     .image-about {
-      height: auto;
-      float: right;
+      flex: 1;
+      height: 100%;
+
+      background: {
+        image: url("src/assets/about.png");
+        size: 100%;
+        repeat: no-repeat;
+        position: center center;
+      };
     }
   }
 }
