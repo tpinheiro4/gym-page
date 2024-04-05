@@ -6,20 +6,24 @@
 
 .container {
   width: 100%;
-  max-width: 80%;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .half-container {
   width: 100%;
-  max-width: calc(80% / 2);
+  overflow-x: hidden;
+
+  @media (min-width: 1200px) {
+    max-width: calc(1440px / 2);
+  }
 }
 
-.left {
+.align-left {
   margin-left: auto;
 }
 
-.right {
+.align-right {
   margin-right: auto;
 }
 
