@@ -105,4 +105,57 @@ body {
       }
     }
   }
+
+  .workout-container {
+
+    h2 {
+      font-family: $titleFont;
+      color: #fff;
+      text-decoration: underline $primaryColor;
+      text-transform: uppercase;
+      margin-bottom: 4rem;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 3rem;
+    
+      .card {
+          display: flex;
+          flex-direction: column;
+          border: none;
+
+        p {
+          display: flex;
+          color: #fff;
+          font-family: $fontBase;
+          text-transform: uppercase;
+        }
+
+        .card-content {
+          display: flex;
+          width: 267px;
+          height: 336px;
+          background: {
+            image: url('src/assets/workoutLogo.png');
+            size: cover;
+            repeat: no-repeat;
+            position: center center;
+          }
+          justify-content: center;
+          align-items: center;
+        }
+
+        button {
+          border: none;
+          font-family: $fontBase;
+          text-transform: uppercase;
+          color: #fff;
+          background-color: #000;
+        }
+      }
+    }
+
+    
+  }
 }
