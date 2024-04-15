@@ -13,18 +13,63 @@ header {
       margin-right: 68px;
     }
 
-    .menu {
-      display: flex;
-      gap: 40px;
-      margin-bottom: 0;
+    .desktop-menu {
+      @media (max-width: 1199px) {
+        display: none;
+      }
 
-      &__item {
-        a {
-          color: white;
-          font-family: $titleFont;
-          font-size: 18px;
-          font-style: normal;
-          letter-spacing: 2px;
+      &__menu {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 0;
+  
+        &--item {
+          a {
+            color: white;
+            font-family: $titleFont;
+            font-size: 18px;
+            font-style: normal;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+
+    .mobile-menu {
+      padding: 80px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background-color: $primaryColor;
+
+      .close {
+        cursor: pointer;
+        position: absolute;
+        top: 60px;
+        right: 80px;
+        transition: .4s ease all;
+
+        &:hover {
+          opacity: .7;
+        }
+      }
+
+      &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 0;
+  
+        &--item {
+          a {
+            color: white;
+            font-family: $titleFont;
+            font-size: 18px;
+            font-style: normal;
+            letter-spacing: 2px;
+          }
         }
       }
     }
@@ -33,6 +78,12 @@ header {
       display: flex;
       margin-left: auto;
       gap: 36px;
+
+      .menu-mobile-btn {
+        @media (min-width: 1200px) {
+          display: none;
+        }
+      }
     }
   }
 }
