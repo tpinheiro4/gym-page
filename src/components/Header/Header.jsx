@@ -1,9 +1,28 @@
-import { useState } from 'react'
-import logo from '../../assets/Logo.png'
-import { LogOut, Search, Menu, X } from 'lucide-react'
+import { useState, useEffect } from 'react';
+import { LogOut, Search, Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset;
+
+            if (scrollTop > 500) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [])
 
     const openMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -29,9 +48,9 @@ export default function Header() {
     ]
 
     return (
-        <header>
+        <header className={scrolled ? 'scrolled' : ''}>
             <div className="container">
-                <img className="logo" src={logo} alt="Logo" />
+                <Logo fill={scrolled ? 'black' : 'white'} />
                 
                 <nav className="desktop-menu">
                     <ul className="desktop-menu__menu">
@@ -54,8 +73,8 @@ export default function Header() {
                 )}     
     
                 <div className="right">
-                    <Search width="18" height={18} color="#fff"/>
-                    <LogOut width="18" height={18} color='#fff'/>
+                    <Search width="18" height={18} color={scrolled ? 'black' : 'white'} />
+                    <LogOut width="18" height={18} color={scrolled ? 'black' : 'white'} />
                     <Menu className="menu-mobile-btn" color='white' onClick={openMobileMenu} />
                 </div>
             </div>
