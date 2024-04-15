@@ -1,4 +1,4 @@
-dexport default function Workout() {
+export default function Workout() {
     const workoutCards = [
         {
             name: 'braços',
