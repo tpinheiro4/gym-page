@@ -1,5 +1,3 @@
-import image from '../../assets/workoutLogo.png'
-
 export default function Workout() {
     return (
         <section className="workout-container container">
