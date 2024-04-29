@@ -3,20 +3,7 @@ import { Search, Menu, X, LogIn } from 'lucide-react';
 import styled from 'styled-components';
 import Logo from './Logo';
 
-const RegisterButton = styled.a`
-    cursor: pointer;
-    background-color: #8F00FF;
-    color: white;
-    padding: 5px 10px;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 18px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-radius: 5px;
-`
-
 export default function Header() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -36,6 +23,20 @@ export default function Header() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [])
+
+    const RegisterButton = styled.a`
+        cursor: pointer;
+        background-color: ${scrolled ? 'black' : '#8F00FF'};
+        color: white;
+        padding: 5px 10px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-radius: 5px;
+    `
+
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const openMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
