@@ -1,6 +1,19 @@
 import { useState, useEffect } from 'react';
-import { LogOut, Search, Menu, X } from 'lucide-react';
+import { Search, Menu, X, LogIn } from 'lucide-react';
+import styled from 'styled-components';
 import Logo from './Logo';
+
+const RegisterButton = styled.a`
+    cursor: pointer;
+    background-color: #8F00FF;
+    color: white;
+    padding: 5px 10px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 5px;
+`
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -74,7 +87,8 @@ export default function Header() {
     
                 <div className="right">
                     <Search width="18" height={18} color={scrolled ? 'black' : 'white'} />
-                    <LogOut width="18" height={18} color={scrolled ? 'black' : 'white'} />
+                    <a href="/signin"><LogIn width="18" height={18} color={scrolled ? 'black' : 'white'} /></a>
+                    <RegisterButton href='/signup'>Crie sua conta</RegisterButton>
                     <Menu className="menu-mobile-btn" color='white' onClick={openMobileMenu} />
                 </div>
             </div>
